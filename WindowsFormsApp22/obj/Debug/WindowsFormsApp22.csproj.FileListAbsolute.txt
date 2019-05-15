@@ -1,0 +1,11 @@
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.exe.config
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.exe
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.pdb
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csprojResolveAssemblyReference.cache
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Form1.resources
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.ItemForm.resources
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Properties.Resources.resources
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.GenerateResource.Cache
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.exe
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.pdb
+c:\users\mak\documents\visual studio 2017\Projects\WindowsFormsApp22\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.AddProductForm.resources
