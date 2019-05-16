@@ -34,5 +34,9 @@ namespace WindowsFormsApp22
             Date = (string)info.GetValue("Date", typeof(string));
             Expiration = (string)info.GetValue("Expiration", typeof(string));
         }
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

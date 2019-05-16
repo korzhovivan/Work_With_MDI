@@ -15,12 +15,14 @@ namespace WindowsFormsApp22
         public AddProductForm()
         {
             InitializeComponent();
+            this.LayoutMdi(MdiLayout.TileVertical);
         }
 
         public AddProductForm(Form1 form1)
         {
             InitializeComponent();
             this.form1 = form1;
+            this.LayoutMdi(MdiLayout.TileVertical);
         }
 
         private Product newProduct = new Product();
@@ -37,15 +39,16 @@ namespace WindowsFormsApp22
         private void btn_Add_Click(object sender, EventArgs e)
         {
             NewProduct.Group = txtBox_Group.Text;
-            NewProduct.Name = txtBox_Name.Name;
+            NewProduct.Name = txtBox_Name.Text;
             NewProduct.Manufecturer = txtBox_Manufacturer.Text;
             NewProduct.Date = txtBox_Date.Text;
             NewProduct.Expiration = txtBox_ExpirationDate.Text;
+
             foreach (Form item in form1.MdiChildren)
             {
                 if(item.GetType().Name == "ItemForm")
                 {
-                    (item as ItemForm).NameForm = NewProduct;
+                    (item as ItemForm).NewProduct = NewProduct;
                 }
             }
         }

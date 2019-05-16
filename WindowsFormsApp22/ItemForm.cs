@@ -14,10 +14,12 @@ namespace WindowsFormsApp22
     {
         private Form1 form1;
         
-        public Product NameForm {
+        public Product NewProduct {
             set
             {
-                form1.sldkafj.add(value);
+                form1.products.Add(value);
+                listBox_Products.Items.Add(value.ToString());
+                
             }
         }
 
@@ -31,8 +33,9 @@ namespace WindowsFormsApp22
         public ItemForm(Form1 form1)
         {
             InitializeComponent();
+            this.LayoutMdi(MdiLayout.TileVertical);
             this.form1 = form1;
-            form1.
+            
         }
     }
 }
