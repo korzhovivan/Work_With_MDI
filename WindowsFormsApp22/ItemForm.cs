@@ -22,20 +22,21 @@ namespace WindowsFormsApp22
                 
             }
         }
-
-
-        public ItemForm()
-        {
-            InitializeComponent();
-            this.LayoutMdi(MdiLayout.TileVertical);
-        }
-
         public ItemForm(Form1 form1)
         {
             InitializeComponent();
             this.LayoutMdi(MdiLayout.TileVertical);
             this.form1 = form1;
-            
+            this.FormClosing += Close;
+            foreach (Product item in form1.products)
+            {
+                listBox_Products.Items.Add(item.ToString());
+            }
+        }
+
+        private void Close(object sender, FormClosingEventArgs e)
+        {
+            form1.File_Open = false;
         }
     }
 }

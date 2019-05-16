@@ -38,18 +38,25 @@ namespace WindowsFormsApp22
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            NewProduct.Group = txtBox_Group.Text;
-            NewProduct.Name = txtBox_Name.Text;
-            NewProduct.Manufecturer = txtBox_Manufacturer.Text;
-            NewProduct.Date = txtBox_Date.Text;
-            NewProduct.Expiration = txtBox_ExpirationDate.Text;
-
-            foreach (Form item in form1.MdiChildren)
+            if (form1.File_Open)
             {
-                if(item.GetType().Name == "ItemForm")
+                NewProduct.Group = txtBox_Group.Text;
+                NewProduct.Name = txtBox_Name.Text;
+                NewProduct.Manufecturer = txtBox_Manufacturer.Text;
+                NewProduct.Date = txtBox_Date.Text;
+                NewProduct.Expiration = txtBox_ExpirationDate.Text;
+
+                foreach (Form item in form1.MdiChildren)
                 {
-                    (item as ItemForm).NewProduct = NewProduct;
+                    if (item.GetType().Name == "ItemForm")
+                    {
+                        (item as ItemForm).NewProduct = NewProduct;
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Create or open file");
             }
         }
     }
