@@ -40,6 +40,9 @@ namespace WindowsFormsApp22
         {
             if (form1.File_Open)
             {
+                NewProduct = null;
+                NewProduct = new Product();
+
                 NewProduct.Group = txtBox_Group.Text;
                 NewProduct.Name = txtBox_Name.Text;
                 NewProduct.Manufecturer = txtBox_Manufacturer.Text;

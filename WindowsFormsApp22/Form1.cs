@@ -19,20 +19,30 @@ namespace WindowsFormsApp22
         {
             InitializeComponent();
         }
+
+        ItemForm item_form;
+
         public bool File_Open = false;
-        public string fileName;
+        public string fileName = "";
 
         public List<Product> products = null;
 
         private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            products = new List<Product>();
-            ItemForm item_form = new ItemForm(this);
-            item_form.MdiParent = this;
-            item_form.Show();
-            this.LayoutMdi(MdiLayout.TileVertical);
-            File_Open = true;
-            fileName = "";
+            if (!File_Open)
+            {
+                products = new List<Product>();
+                item_form = new ItemForm(this);
+                item_form.MdiParent = this;
+                item_form.Show();
+                this.LayoutMdi(MdiLayout.TileVertical);
+                File_Open = true;
+                fileName = "";
+            }
+            else
+            {
+                MessageBox.Show("You can work only with one file");
+            }
         }
 
         private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,50 +57,90 @@ namespace WindowsFormsApp22
             else
             {
                 MessageBox.Show("Create or open file");
-
             }
-            
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if (File_Open)
             {
-                fileName = dialog.FileName;
-                Stream stream = File.Open(fileName, FileMode.Create);
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(stream, products);
-                stream.Close();
+                SaveFileDialog dialog = new SaveFileDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = dialog.FileName;
+                    Stream stream = File.Open(fileName, FileMode.Create);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(stream, products);
+                    stream.Close();
+                }
             }
-           
+            else
+            {
+                MessageBox.Show("Create or open file");
+            }
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Stream stream = File.Open(fileName, FileMode.Create);
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(stream, products);
-            stream.Close();
+            if (File_Open)
+            {
+                if (fileName == "")
+                {
+                    SaveFileDialog dialog = new SaveFileDialog();
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        fileName = dialog.FileName;
+                        Stream stream = File.Open(fileName, FileMode.Create);
+                        BinaryFormatter bf = new BinaryFormatter();
+                        bf.Serialize(stream, products);
+                        stream.Close();
+                    }
+                }
+                else
+                {
+                    Stream stream = File.Open(fileName, FileMode.Create);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(stream, products);
+                    stream.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Create or open file");
+            }
+
+            
         }
 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if (!File_Open)
             {
-                fileName = dialog.FileName;
-                Stream stream = File.Open(fileName, FileMode.Open);
-                BinaryFormatter bf = new BinaryFormatter();
-                products = (List<Product>)bf.Deserialize(stream);
-                stream.Close();
+                OpenFileDialog dialog = new OpenFileDialog();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = dialog.FileName;
+                    Stream stream = File.Open(fileName, FileMode.Open);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    products = (List<Product>)bf.Deserialize(stream);
+                    stream.Close();
 
-                ItemForm item_form = new ItemForm(this);
-                item_form.MdiParent = this;
-                item_form.Show();
-                this.LayoutMdi(MdiLayout.TileVertical);
-                File_Open = true;
+                    item_form = new ItemForm(this);
+                    item_form.MdiParent = this;
+                    item_form.Show();
+                    this.LayoutMdi(MdiLayout.TileVertical);
+                    File_Open = true;
+                }
             }
+            else
+            {
+                MessageBox.Show("You can work only with one file");
+            }
+        }
+
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            item_form.Deleter = 0;
         }
     }
 }
