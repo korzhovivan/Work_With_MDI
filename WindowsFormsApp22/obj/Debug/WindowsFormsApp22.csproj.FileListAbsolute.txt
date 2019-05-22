@@ -45,3 +45,5 @@ C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22
 C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.GenerateResource.Cache
 C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.exe
 C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.pdb
+C:\Users\Korzhov Ivan\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.EditProductForm.resources
+C:\Users\Korzhov Ivan\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.FindForm.resources

@@ -26,7 +26,17 @@ namespace WindowsFormsApp22
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            
+            if (File_Open)
+            {
+                FindForm addProduct = new FindForm(this);
+                addProduct.MdiParent = this;
+                addProduct.Show();
+                this.LayoutMdi(MdiLayout.TileVertical);
+            }
+            else
+            {
+                MessageBox.Show("Create or open file");
+            }
         }
 
         public int FindFilter;

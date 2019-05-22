@@ -39,6 +39,21 @@ namespace WindowsFormsApp22
                 listBox_Products.Items[Selected_Items] = value;
             }
         }
+        public Product Visible
+        {
+            set
+            {
+                listBox_Products.Items.Add(value.ToString());
+            }
+        }
+        public bool DeleteAllProduct
+        {
+            set
+            {
+                listBox_Products.Items.Clear();
+            }
+        }
+
 
 
 

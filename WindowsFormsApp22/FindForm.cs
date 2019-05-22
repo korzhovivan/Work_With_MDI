@@ -12,18 +12,27 @@ namespace WindowsFormsApp22
 {
     public partial class FindForm : Form
     {
+        ItemForm item;
+        Form1 form1;
         public FindForm(Form1 form1)
         {
             InitializeComponent();
-            switch (form1.FindFilter)
-            {
-                case 1: label1.Text = "Find by group"; break;
-                
+            item = form1.item_form;
+            this.form1 = form1;
+            txtBox_Seach.TextChanged += TxtBox_Seach_TextChanged;
+            
+        }
 
-                default:
-                    break;
+        private void TxtBox_Seach_TextChanged(object sender, EventArgs e)
+        {
+            item.DeleteAllProduct = true;
+            for (int i = 0; i < form1.products.Count; i++)
+            {
+                if (form1.products[i].Name.Contains(txtBox_Seach.Text))
+                {
+                    item.Visible = form1.products[i];
+                }
             }
         }
-       
     }
 }
