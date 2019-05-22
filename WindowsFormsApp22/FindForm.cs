@@ -20,7 +20,7 @@ namespace WindowsFormsApp22
             item = form1.item_form;
             this.form1 = form1;
             txtBox_Seach.TextChanged += TxtBox_Seach_TextChanged;
-            
+           
         }
 
         private void TxtBox_Seach_TextChanged(object sender, EventArgs e)
@@ -28,10 +28,43 @@ namespace WindowsFormsApp22
             item.DeleteAllProduct = true;
             for (int i = 0; i < form1.products.Count; i++)
             {
-                if (form1.products[i].Name.Contains(txtBox_Seach.Text))
+                switch (form1.FindFilter)
                 {
-                    item.Visible = form1.products[i];
+                    case 1:
+                        if (form1.products[i].Group.Contains(txtBox_Seach.Text))
+                        {
+                            item.Visible = form1.products[i];
+                        }
+                        break;
+                    case 2:
+                        if (form1.products[i].Name.Contains(txtBox_Seach.Text))
+                        {
+                            item.Visible = form1.products[i];
+                        }
+                        break;
+                    case 3:
+                        if (form1.products[i].Manufecturer.Contains(txtBox_Seach.Text))
+                        {
+                            item.Visible = form1.products[i];
+                        }
+                        break;
+                    case 4:
+                        if (form1.products[i].Date.Contains(txtBox_Seach.Text))
+                        {
+                            item.Visible = form1.products[i];
+                        }
+                        break;
+                    case 5:
+                        if (form1.products[i].Expiration.Contains(txtBox_Seach.Text))
+                        {
+                            item.Visible = form1.products[i];
+                        }
+                        break;
+
                 }
+
+
+                
             }
         }
     }

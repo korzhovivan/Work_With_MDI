@@ -36,7 +36,7 @@ namespace WindowsFormsApp22
         }
         public override string ToString()
         {
-            return this.Name;
+            return "["+ this.Group+"]  [" + this.Name + "] [" +  this.Manufecturer + "] ["  + this.Date + " - " + this.Expiration + "]";
         }
     }
 }

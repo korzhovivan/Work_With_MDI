@@ -30,7 +30,7 @@ namespace WindowsFormsApp22
             txtBox_Date.Text = form1.products[itemForm.Selected_Items].Date;
             txtBox_ExpirationDate.Text = form1.products[itemForm.Selected_Items].Expiration;
 
-            MessageBox.Show(itemForm.Selected_Items.ToString());
+            
         }
 
         private Product newProduct = new Product();
