@@ -16,25 +16,31 @@ namespace WindowsFormsApp22
 
         internal int Selected_Items;
 
-        List<Product> Item_products = new List<Product>();
-
         public Product NewProduct {
             set
             {
                 form1.products.Add(value);
-                Item_products.Add(value);
                 listBox_Products.Items.Add(value.ToString());
             }
         }
-
         public int Deleter {
             set
             {
-                Item_products.RemoveAt(listBox_Products.SelectedIndex);
                 form1.products.RemoveAt(listBox_Products.SelectedIndex);
                 listBox_Products.Items.RemoveAt(listBox_Products.SelectedIndex);
             }
         }
+        public Product EditProduct
+        {
+            set
+            {
+                Selected_Items = listBox_Products.SelectedIndex;
+                form1.products[Selected_Items] = value;
+                listBox_Products.Items[Selected_Items] = value;
+            }
+        }
+
+
 
         public ItemForm(Form1 form1)
         {
@@ -45,8 +51,14 @@ namespace WindowsFormsApp22
             foreach (Product item in form1.products)
             {
                 listBox_Products.Items.Add(item.ToString());
-                Item_products.Add(item);
+                
             }
+            listBox_Products.SelectedIndexChanged += ListBox_Products_SelectedIndexChanged;
+        }
+
+        private void ListBox_Products_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Selected_Items = listBox_Products.SelectedIndex;
         }
 
         private void Close(object sender, FormClosingEventArgs e)

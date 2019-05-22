@@ -33,3 +33,15 @@ C:\Users\Korzhov Ivan\Desktop\MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.
 C:\Users\Korzhov Ivan\Desktop\MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.CoreCompileInputs.cache
 C:\Users\Korzhov Ivan\Desktop\MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.exe
 C:\Users\Korzhov Ivan\Desktop\MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.pdb
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.exe.config
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.exe
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.pdb
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csprojResolveAssemblyReference.cache
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.AddProductForm.resources
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Form1.resources
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.EditProductForm.resources
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.ItemForm.resources
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Properties.Resources.resources
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.GenerateResource.Cache
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.exe
+C:\Users\MAK\Desktop\Work_With_MDI\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.pdb

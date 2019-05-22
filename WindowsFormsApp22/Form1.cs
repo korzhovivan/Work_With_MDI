@@ -18,9 +18,19 @@ namespace WindowsFormsApp22
         public Form1()
         {
             InitializeComponent();
+            for (int i = 0; i < FindToolStripMenuItem.DropDownItems.Count; i++)
+            {
+                FindToolStripMenuItem.DropDownItems[i].Click += Form1_Click;
+            }
         }
 
-        ItemForm item_form;
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public int FindFilter;
+        public ItemForm item_form;
 
         public bool File_Open = false;
         public string fileName = "";
@@ -108,7 +118,7 @@ namespace WindowsFormsApp22
             {
                 MessageBox.Show("Create or open file");
             }
-
+            
             
         }
 
@@ -141,6 +151,42 @@ namespace WindowsFormsApp22
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             item_form.Deleter = 0;
+        }
+
+        private void EditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (File_Open)
+            {
+                EditProductForm addProduct = new EditProductForm(this);
+                addProduct.MdiParent = this;
+                addProduct.Show();
+                this.LayoutMdi(MdiLayout.TileVertical);
+            }
+            else
+            {
+                MessageBox.Show("Create or open file");
+            }
+        }
+
+        private void ToolStripMenuItem_FindGroup_Click(object sender, EventArgs e)
+        {
+            FindFilter = 1;
+        }
+        private void ToolStripMenuItem_FindName_Click(object sender, EventArgs e)
+        {
+            FindFilter = 2;
+        }
+        private void ToolStripMenuItem_FindManufacturer_Click(object sender, EventArgs e)
+        {
+            FindFilter = 3;
+        }
+        private void ToolStripMenuItem_FindDateManuf_Click(object sender, EventArgs e)
+        {
+            FindFilter = 4;
+        }
+        private void ToolStripMenuItem_FindDate_Click(object sender, EventArgs e)
+        {
+            FindFilter = 5;
         }
     }
 }

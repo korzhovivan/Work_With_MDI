@@ -38,12 +38,12 @@
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.найтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.группаТоваровToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.наименованиеТовараToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изготовительToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.датаИзготовленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.срокГодностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_FindGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_FindName = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_FindManufacturer = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_FindDateManuf = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_FindDate = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -54,7 +54,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.операцииСТоваромToolStripMenuItem,
-            this.найтиToolStripMenuItem});
+            this.FindToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1270, 24);
@@ -75,28 +75,28 @@
             // CreateToolStripMenuItem
             // 
             this.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem";
-            this.CreateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.CreateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.CreateToolStripMenuItem.Text = "Create";
             this.CreateToolStripMenuItem.Click += new System.EventHandler(this.CreateToolStripMenuItem_Click);
             // 
             // OpenToolStripMenuItem
             // 
             this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.OpenToolStripMenuItem.Text = "Open";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // SaveToolStripMenuItem
             // 
             this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.SaveToolStripMenuItem.Text = "Save";
             this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // SaveAsToolStripMenuItem
             // 
             this.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
-            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.SaveAsToolStripMenuItem.Text = "Save as";
             this.SaveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
@@ -113,64 +113,70 @@
             // addProductToolStripMenuItem
             // 
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
-            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addProductToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.addProductToolStripMenuItem.Text = "Add Product";
             this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
             // EditToolStripMenuItem
             // 
             this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
-            this.EditToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.EditToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.EditToolStripMenuItem.Text = "Edit";
+            this.EditToolStripMenuItem.Click += new System.EventHandler(this.EditToolStripMenuItem_Click);
             // 
             // DeleteToolStripMenuItem
             // 
             this.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem";
-            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DeleteToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.DeleteToolStripMenuItem.Text = "Delete";
             this.DeleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
-            // найтиToolStripMenuItem
+            // FindToolStripMenuItem
             // 
-            this.найтиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.группаТоваровToolStripMenuItem,
-            this.наименованиеТовараToolStripMenuItem,
-            this.изготовительToolStripMenuItem,
-            this.датаИзготовленияToolStripMenuItem,
-            this.срокГодностиToolStripMenuItem});
-            this.найтиToolStripMenuItem.Name = "найтиToolStripMenuItem";
-            this.найтиToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-            this.найтиToolStripMenuItem.Text = "Find";
+            this.FindToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_FindGroup,
+            this.ToolStripMenuItem_FindName,
+            this.ToolStripMenuItem_FindManufacturer,
+            this.ToolStripMenuItem_FindDateManuf,
+            this.ToolStripMenuItem_FindDate});
+            this.FindToolStripMenuItem.Name = "FindToolStripMenuItem";
+            this.FindToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.FindToolStripMenuItem.Text = "Find";
             // 
-            // группаТоваровToolStripMenuItem
+            // ToolStripMenuItem_FindGroup
             // 
-            this.группаТоваровToolStripMenuItem.Name = "группаТоваровToolStripMenuItem";
-            this.группаТоваровToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.группаТоваровToolStripMenuItem.Text = "Product group";
+            this.ToolStripMenuItem_FindGroup.Name = "ToolStripMenuItem_FindGroup";
+            this.ToolStripMenuItem_FindGroup.Size = new System.Drawing.Size(183, 22);
+            this.ToolStripMenuItem_FindGroup.Text = "Product group";
+            this.ToolStripMenuItem_FindGroup.Click += new System.EventHandler(this.ToolStripMenuItem_FindGroup_Click);
             // 
-            // наименованиеТовараToolStripMenuItem
+            // ToolStripMenuItem_FindName
             // 
-            this.наименованиеТовараToolStripMenuItem.Name = "наименованиеТовараToolStripMenuItem";
-            this.наименованиеТовараToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.наименованиеТовараToolStripMenuItem.Text = "Product name";
+            this.ToolStripMenuItem_FindName.Name = "ToolStripMenuItem_FindName";
+            this.ToolStripMenuItem_FindName.Size = new System.Drawing.Size(183, 22);
+            this.ToolStripMenuItem_FindName.Text = "Product name";
+            this.ToolStripMenuItem_FindName.Click += new System.EventHandler(this.ToolStripMenuItem_FindName_Click);
             // 
-            // изготовительToolStripMenuItem
+            // ToolStripMenuItem_FindManufacturer
             // 
-            this.изготовительToolStripMenuItem.Name = "изготовительToolStripMenuItem";
-            this.изготовительToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.изготовительToolStripMenuItem.Text = "Manufacturer";
+            this.ToolStripMenuItem_FindManufacturer.Name = "ToolStripMenuItem_FindManufacturer";
+            this.ToolStripMenuItem_FindManufacturer.Size = new System.Drawing.Size(183, 22);
+            this.ToolStripMenuItem_FindManufacturer.Text = "Manufacturer";
+            this.ToolStripMenuItem_FindManufacturer.Click += new System.EventHandler(this.ToolStripMenuItem_FindManufacturer_Click);
             // 
-            // датаИзготовленияToolStripMenuItem
+            // ToolStripMenuItem_FindDateManuf
             // 
-            this.датаИзготовленияToolStripMenuItem.Name = "датаИзготовленияToolStripMenuItem";
-            this.датаИзготовленияToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.датаИзготовленияToolStripMenuItem.Text = "Date of manufacture";
+            this.ToolStripMenuItem_FindDateManuf.Name = "ToolStripMenuItem_FindDateManuf";
+            this.ToolStripMenuItem_FindDateManuf.Size = new System.Drawing.Size(183, 22);
+            this.ToolStripMenuItem_FindDateManuf.Text = "Date of manufacture";
+            this.ToolStripMenuItem_FindDateManuf.Click += new System.EventHandler(this.ToolStripMenuItem_FindDateManuf_Click);
             // 
-            // срокГодностиToolStripMenuItem
+            // ToolStripMenuItem_FindDate
             // 
-            this.срокГодностиToolStripMenuItem.Name = "срокГодностиToolStripMenuItem";
-            this.срокГодностиToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.срокГодностиToolStripMenuItem.Text = "Expiration date";
+            this.ToolStripMenuItem_FindDate.Name = "ToolStripMenuItem_FindDate";
+            this.ToolStripMenuItem_FindDate.Size = new System.Drawing.Size(183, 22);
+            this.ToolStripMenuItem_FindDate.Text = "Expiration date";
+            this.ToolStripMenuItem_FindDate.Click += new System.EventHandler(this.ToolStripMenuItem_FindDate_Click);
             // 
             // fileSystemWatcher1
             // 
@@ -206,12 +212,12 @@
         private System.Windows.Forms.ToolStripMenuItem операцииСТоваромToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DeleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem найтиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem группаТоваровToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem наименованиеТовараToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem изготовительToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem датаИзготовленияToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem срокГодностиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FindToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_FindGroup;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_FindName;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_FindManufacturer;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_FindDateManuf;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_FindDate;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.ToolStripMenuItem addProductToolStripMenuItem;
     }
