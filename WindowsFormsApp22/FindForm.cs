@@ -12,11 +12,18 @@ namespace WindowsFormsApp22
 {
     public partial class FindForm : Form
     {
-        public FindForm()
+        public FindForm(Form1 form1)
         {
             InitializeComponent();
+            switch (form1.FindFilter)
+            {
+                case 1: label1.Text = "Find by group"; break;
+                
 
+                default:
+                    break;
+            }
         }
-        public string findBy;
+       
     }
 }
